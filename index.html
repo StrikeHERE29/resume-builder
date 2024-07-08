@@ -5,18 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="index.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
     
-    <form class="form-container">
-        <div class="test">
-            <h1>Content to Print</h1>
-            <p>This is the content of the div that should be printed to PDF.</p>
-            <button type="button" id="printBtn">Print Div to PDF</button>
-        </div>
+    
+
+
+    <div class="main">
+        <div class="content"></div>
+<form class="form-container">
+    <div class="profile-avatar">
+        <h2 class="h2">Personal details</h2>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    </div>
+
+    <div class="profile-name">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name">
+        <label for="last-name">First Name</label>
+        <input type="text" id="last-name">
+    </div>
+
+    <div class="profile-info">
+<label for="mail">E-mail</label>
+<input type="email">
+<label for="phone">Phone number</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+<label for="adress">Adress</label>
+<input type="text" id="adress">
+<button class="printBtn">Click</button>
+    </div>
+
+        
+
+
+
     </form>
+
+    </div>
+    
 
     
     <script src="index.js"></script>
