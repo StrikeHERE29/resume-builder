@@ -5,7 +5,11 @@ let lastName = document.querySelector("#last-name");
 
 
 form.addEventListener("input", ()=>{
-    
+    resume.innerHTML = `
+    <div class="content" style="background-color:#E6D1E2">
+    ${firstName.value}
+    </div>
+    `
 })
 
 
@@ -20,7 +24,7 @@ form.addEventListener("input", ()=>{
 
     btn.addEventListener("click", ()=>{
         print();
-        window.onafterprint;
+        
 
 
     })
