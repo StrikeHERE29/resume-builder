@@ -89,6 +89,18 @@ h1{
     right: 20%;
 }
 
+.contact{
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4{
+    z-index: 99;
+}
+
 
 
 .right{
