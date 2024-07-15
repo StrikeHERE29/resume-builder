@@ -159,6 +159,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 h2{
@@ -172,6 +173,7 @@ h2{
 .hard{
     z-index: 99;
     color:#3361AE ;
+    line-height: 0;
 }
 
 
@@ -179,6 +181,30 @@ h2{
 
 .right{
     grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.right-head, .right-main, .right-footer{
+    border-bottom: 2px solid #3361AE;
+}
+
+
+.right-head{
+   z-index: 99;
+   width: 100%;
+   margin-top: 20px;
+}
+
+.right-main{
+    
+}
+
+.grid-footer{
+    
 }
 
 .left::after {
