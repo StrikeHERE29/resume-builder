@@ -34,7 +34,7 @@ body{
 
 .content{
     width: 30vw;
-    height: 100vh;
+    height: 120vh;
     background-color: #E6D1E2;
     color: black;
     display: grid;
@@ -99,7 +99,81 @@ h1{
 
 h4{
     z-index: 99;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3361AE;
 }
+
+.phone, .mail, .adress{
+    font-size: 12px;
+    color: black;
+    z-index: 20;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #3361AE;
+    color: #3361AE;
+    line-height: 0.3;
+}
+
+.cap{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p{
+    text-transform: uppercase;
+    
+}
+
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.h1{
+    z-index: 91;
+    
+    color: #3361AE;
+    font-weight: 900;
+    letter-spacing: 0;
+    font-size: 50px;
+}
+
+.desc-text{
+    z-index: 91;
+    text-align: center;
+    max-width: 80%;
+    color: #3361AE;
+}
+
+.hard-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    z-index: 99;
+    color: #3361AE;
+    font-size: 20px;
+    letter-spacing: 0;
+    font-weight: 900;
+}
+
+.hard{
+    z-index: 99;
+    color:#3361AE ;
+}
+
 
 
 
