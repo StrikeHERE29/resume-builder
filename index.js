@@ -2,14 +2,19 @@ let resume = document.querySelector(".content");
 let firstName = document.querySelector("#first-name");
 let form = document.querySelector(".form-container");
 let lastName = document.querySelector("#last-name");
+let jobSub = document.querySelector(".job-subtitle");
+let second = document.querySelector("#second-page");
+let showBtn = document.querySelector(".show-btn")
+
+
+showBtn.addEventListener("click", ()=>{
+    second.classList.toggle("active");
+    form.classList.toggle("disabled");
+})
 
 
 form.addEventListener("input", ()=>{
-    resume.innerHTML = `
-    <div class="content" style="background-color:#E6D1E2">
-    ${firstName.value}
-    </div>
-    `
+   jobSub.innerHTML = `${firstName.value}`
 })
 
 
@@ -24,7 +29,7 @@ form.addEventListener("input", ()=>{
 
     btn.addEventListener("click", ()=>{
         print();
-        
+        firstName.focus();
 
 
     })
