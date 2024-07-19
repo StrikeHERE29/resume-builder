@@ -168,6 +168,7 @@ h2{
     font-size: 20px;
     letter-spacing: 0;
     font-weight: 900;
+    margin-top: 100px;
 }
 
 .hard{
@@ -290,3 +291,58 @@ visibility: hidden;
     
 
 }
+
+
+
+.progress-container{
+    position: absolute;
+    right: 10px;
+    top: -3%;
+    z-index: 99;
+
+}
+
+.progress{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.progress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-left: 0;
+}
+
+
+.progress::before{
+    content: '';
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    transition: .4 ease;
+}
+
+
+.bar{
+    background-color: #3361AE;
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    z-index: -1;
+    transition: .4 ease;
+}
+
+
