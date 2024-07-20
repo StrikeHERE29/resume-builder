@@ -1,0 +1,267 @@
+:root{
+    --form:#0E484A;
+    --inactive:hsl(180, 11%, 51%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.steps-container{
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--form);
+    max-width: 30vw;
+    color: white;
+    min-height: 80vh;
+    min-width: 20vw;
+    margin-top: 6rem;
+    margin-left:3rem ;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
+
+.step-h, .step-p{
+    text-align: center;
+
+}
+
+.step-h{
+    letter-spacing: 1px;
+    margin-top: 60px;
+
+}
+
+.step-p{
+    font-size: 20px;
+
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+.steps * button{
+    margin-right: 20px;
+}
+
+
+.steps * p{
+    font-size: 1.2rem;
+    
+}
+
+.one{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: var(--form);
+    font-weight: bolder;
+   border-radius: 50%;
+   border: none;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.two, .three, .four{
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
+   border-radius: 50%;
+   border: none;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: transparent;
+   color: var(--inactive);
+   border: 1px solid var(--inactive)
+   
+}
+
+.education, .experience, .skills{
+    color:var(--inactive);
+}
+
+
+.one-container{
+    margin-top: -30px;
+}
+
+.line{
+    width: 2px;
+    height: 88px;
+    
+    
+    position: absolute;
+   top: 0;
+   left:40px;
+   background-color: var(--inactive);
+}
+
+.first-line{
+    top: 34%;
+    left: 43px;
+}
+
+.second-line{
+    top: 51%;
+    left: 43px;
+    height: 87px;
+}
+
+.third-line{
+    top: 67.8%;
+    left: 43px;
+}
+
+
+/* second page styling */
+
+.second-page{
+position: absolute;
+
+}
+
+
+.second-page .one{
+    background-color: hsl(0, 5%, 77%);
+}
+
+.second-page .personal{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.second-page .first-line{
+    background-color: white;
+}
+
+.second-page .two{
+    background-color: white;
+    color: var(--form);
+}
+
+.second-page .education{
+    color: white;
+}
+
+
+/*styling the third page*/
+
+.third-page{
+    position: absolute;
+
+}
+
+
+.third-page .one{
+    background-color: hsl(0, 5%, 77%);
+}
+
+.third-page .personal{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.third-page .first-line {
+    background-color: white;
+}
+
+.third-page .second-line{
+    background-color: white;
+}
+
+.third-page .two{
+    background-color: hsl(0, 5%, 77%);
+    color: var(--form);
+}
+
+.third-page .education{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.third-page .three{
+    background-color: white;
+    color: var(--form);
+}
+
+.third-page .experience{
+    color: white;
+}
+
+
+/*styling the fourth page*/
+
+.fourth-page{
+    position: absolute;
+}
+.fourth-page .one{
+    background-color: hsl(0, 5%, 77%);
+}
+
+.fourth-page .personal{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.fourth-page .first-line {
+    background-color: white;
+}
+
+.fourth-page .second-line{
+    background-color: white;
+}
+
+.fourth-page .third-line{
+    background-color: white;
+}
+
+.fourth-page .two{
+    background-color: hsl(0, 5%, 77%);
+    color: var(--form);
+}
+
+.fourth-page .education{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.fourth-page .three{
+    background-color: hsl(0, 5%, 77%);
+    color: var(--form);
+}
+
+.fourth-page .experience{
+    color:hsl(0, 5%, 77%) ;
+}
+
+.fourth-page .skills{
+    color: white;
+}
+
+.fourth-page .four{
+    background-color: white;
+    color: var(--form);
+}
