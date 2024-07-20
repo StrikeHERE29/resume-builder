@@ -450,11 +450,23 @@ border-radius: 10px;
     font-weight: bold;
 }
 
-.second-form{
+.second-form, .third-form, .fourth-form{
     position: absolute;
     top: 0.2%;
     right: 45.4%;
+    overflow-y: auto;
+    
 }
+
+
+.first-form, .second-form, .third-form{
+    visibility: hidden;
+}
+
+
+.second-form::-webkit-scrollbar {
+    display: none;
+  }
 
 .personal-exp{
     margin-top: 80px;
@@ -510,4 +522,33 @@ border-radius: 10px;
     outline: none;
     background-color: var(--form);
     color: white;
+}
+
+.company-container:focus-within, .job-container:focus-within, .city-container:focus-within {
+    border: 2px solid var(--form);
+    
+}
+
+.company-container:focus-within label, .job-container:focus-within label, .city-container:focus-within label{
+    color: var(--form);
+}
+
+.company-container, .job-container, .city-container{
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+
+
+.company-container label, .job-container label, .city-container label{
+    border-right: 1px solid black;
+    font-size: 20px;
+}
+
+#company, #job, #city{
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
 }

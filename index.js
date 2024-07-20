@@ -22,6 +22,12 @@ prev.addEventListener("click", () => {
 });
 
 
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const yearSelects = document.querySelectorAll(".year");
     const currentYear = 2024;
@@ -36,7 +42,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
-
-    
