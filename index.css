@@ -7,6 +7,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: rgb(216,208,222);
+background: linear-gradient(90deg, rgba(216,208,222,1) 0%, rgba(216,213,245,1) 99%);
 }
 
 
@@ -145,6 +147,7 @@ body{
 
 .second-page{
 position: absolute;
+visibility: hidden;
 
 }
 
@@ -175,7 +178,7 @@ position: absolute;
 
 .third-page{
     position: absolute;
-
+    visibility: hidden;
 }
 
 
@@ -218,6 +221,7 @@ position: absolute;
 
 .fourth-page{
     position: absolute;
+    visibility: hidden;
 }
 .fourth-page .one{
     background-color: hsl(0, 5%, 77%);

@@ -1,0 +1,22 @@
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+let pages = document.querySelectorAll(".steps-container");
+let count = 0;
+
+next.addEventListener("click", () => {
+    if (count < pages.length - 1) {
+        pages[count].style.visibility = "hidden";
+        count++;
+        pages[count].style.visibility = "visible";
+    }
+    console.log(count);
+});
+
+prev.addEventListener("click", () => {
+    if (count > 0) {
+        pages[count].style.visibility = "hidden";
+        count--;
+        pages[count].style.visibility = "visible";
+    }
+    console.log(count);
+});
