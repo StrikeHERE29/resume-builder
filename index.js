@@ -9,19 +9,33 @@ let bar = document.querySelector(".bar");
 let zero = document.querySelector(".zero");
 let fifty = document.querySelector(".fifty");
 let hundred = document.querySelector(".hundred");
+let third = document.querySelector(".third-page")
 
 fifty.addEventListener("click", ()=>{
     bar.style.width = "50%";
-    second.classList.toggle("active");
+    second.classList.add("active");
+    if(third.classList.contains("third")){
+        third.classList.remove("third")
+    }
 })
 
 hundred.addEventListener("click", ()=>{
     bar.style.width = "100%"
+    if(second.classList.contains("active")){
+        second.classList.remove("active")
+    }
+    third.classList.add("third")
 })
 
 
 zero.addEventListener("click", ()=>{
     bar.style.width = "0%";
+    if(second.classList.contains("active")){
+        second.classList.remove("active")
+    }
+    if(third.classList.contains("third")){
+        third.classList.remove("third")
+    }
 })
 
 
