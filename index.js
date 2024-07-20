@@ -22,4 +22,21 @@ prev.addEventListener("click", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSelects = document.querySelectorAll(".year");
+    const currentYear = 2024;
+    const startYear = 1960;
 
+    yearSelects.forEach(yearSelect => {
+        for (let year = currentYear; year >= startYear; year--) {
+            const option = document.createElement("option");
+            option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+    });
+});
+
+
+
+    
