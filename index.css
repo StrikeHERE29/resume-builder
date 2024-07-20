@@ -32,6 +32,7 @@ background: linear-gradient(90deg, rgba(216,208,222,1) 0%, rgba(216,213,245,1) 9
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     position: relative;
+    box-shadow: -10px 9px 8px 0px rgba(0,0,0,0.6);
 }
 
 .step-h, .step-p{
@@ -268,4 +269,183 @@ visibility: hidden;
 .fourth-page .four{
     background-color: white;
     color: var(--form);
+}
+
+
+.form{
+    min-width: 30vw;
+    max-width: 30vw;
+    min-height: 84vh;
+    max-height: 84vh;
+    margin-top: 95px;
+    background-color: white;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: 7px 8px 11px 1px rgba(0,0,0,0.6);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.form-title, .form-subtitle{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+}
+
+.file-input {
+    display: none; /* Ascunde input-ul real */
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--form);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.fullname, .mail, .phone, .adress{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 60%;
+    transition: border .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: background-color .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 10px;
+}
+
+
+
+#name, #mail, #phone, #adress{
+    border: none;
+    border-left: 1px solid black;
+    padding: 10px;
+    width: 80%;
+    outline: none;
+}
+
+label{
+    padding: 10px;
+    color: hsl(0, 2%, 54%);
+    transition: color .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    
+}
+
+#name:focus-within,#mail:focus-within,#phone:focus-within,#adress:focus-within{
+    border-left:1px solid var(--form);
+}
+
+
+.fullname:focus-within, .mail:focus-within, .phone:focus-within, .adress:focus-within {
+    border: 2px solid var(--form);
+    
+}
+
+.fullname:focus-within label, .mail:focus-within label, .phone:focus-within label, .adress:focus-within label {
+    color: var(--form);
+}
+
+.form-personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.birthDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.birth{
+max-width: 10%;
+padding: 10px 0;
+text-align: center;
+outline: none;
+border-radius: 10px;
+}
+
+.birth:focus{
+    border: 2px solid var(--form);
+}
+
+
+.gen-inp {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none; 
+}
+
+
+.gen {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+
+.gen::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.gen-inp:checked + .gen {
+    background-color: var(--form);
+    border-color: var(--form);
+    color: white; 
+}
+
+.gen-inp:checked + .gen::before {
+    background-color: var(--form);
+    border-color: var(--form);
+}
+
+
+.gen:hover {
+    background-color: #f0f0f0; 
+}
+
+#about-me{
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#about-me::placeholder{
+    text-decoration:underline;
+}
+
+.dob{
+    color: var(--form);
+    font-weight: bold;
 }

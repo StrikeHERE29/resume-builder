@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
     <div class="container">
@@ -129,7 +132,57 @@
 
 
         <form class="form">
+            <h1 class="form-title">Your personal information</h1>
+            <p class="form-subtitle">Enter your personal information</p>
+            <div class="form-personal">
+                <div class="fullname">
+                    <label for="name"><i class="fa-solid fa-user"></i></label>
+                <input id="name" type="text" placeholder="Full Name" required>
+                </div>
+                
+                <div class="mail">
+                    <label for="mail"><i class="fa-solid fa-envelope"></i></label>
+                    <input id="mail" type="email" placeholder="E-mail" required>
+                </div>
+                <div class="phone">
+                    <label for="phone"><i class="fa-solid fa-phone"></i></label>
+                    <input id="phone" type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="adress">
+                    <label for="adress"><i class="fa-solid fa-house"></i></label>
+                    <input id="adress" type="text" placeholder="Adress" required>
+                </div>
+                <p class="dob">Date of Birth</p>
+                <div class="birthDate">
+                    
+                    <input class="birth" type="text" placeholder="DD">
+                    <input class="birth" type="text" placeholder="MM">
+                    <input class="birth" type="text" placeholder="YY">
+                </div>
 
+                <p class="dob">Gender</p>
+                <div class="gender">
+                    <input id="male" type="radio" name="gender-select" class="gen-inp">
+                    <label class="gen" for="male">Male</label>
+                    <input id="female" type="radio" name="gender-select" class="gen-inp">
+                    <label class="gen" for="female">Female</label>
+                </div>
+                
+                
+                
+                
+                
+            
+                    
+
+                <div class="file-upload">
+        <input type="file" id="file" class="file-input">
+        <label for="file" class="file-label"><i class="fa-solid fa-camera"></i></label>
+        
+    </div>
+    <textarea name="" id="about-me" cols="30" rows="10" placeholder="Write something about yourself" required></textarea>
+
+            </div>
         </form>
     </div>
     
