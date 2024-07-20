@@ -1,13 +1,21 @@
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
 let pages = document.querySelectorAll(".steps-container");
+let forms = document.querySelectorAll(".form");
 let count = 0;
+
+
+
+
+
 
 next.addEventListener("click", () => {
     if (count < pages.length - 1) {
         pages[count].style.visibility = "hidden";
+        forms[count].style.visibility = "hidden"
         count++;
         pages[count].style.visibility = "visible";
+       forms[count].style.visibility = "visible"
     }
     console.log(count);
 });
@@ -15,8 +23,10 @@ next.addEventListener("click", () => {
 prev.addEventListener("click", () => {
     if (count > 0) {
         pages[count].style.visibility = "hidden";
+        forms[count].style.visibility = "hidden";
         count--;
         pages[count].style.visibility = "visible";
+        forms[count].style.visibility = "visible";
     }
     console.log(count);
 });

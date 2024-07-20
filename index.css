@@ -297,7 +297,7 @@ visibility: hidden;
 }
 
 .file-input {
-    display: none; /* Ascunde input-ul real */
+    display: none; 
 }
 
 .file-label {
@@ -455,13 +455,11 @@ border-radius: 10px;
     top: 0.2%;
     right: 45.4%;
     overflow-y: auto;
-    
-}
-
-
-.first-form, .second-form, .third-form{
     visibility: hidden;
 }
+
+
+
 
 
 .second-form::-webkit-scrollbar {
@@ -552,3 +550,4 @@ border-radius: 10px;
     padding: 12px;
     font-size: 16px;
 }
+
