@@ -223,6 +223,7 @@ visibility: hidden;
 .fourth-page{
     position: absolute;
     visibility: hidden;
+    
 }
 .fourth-page .one{
     background-color: hsl(0, 5%, 77%);
@@ -531,7 +532,7 @@ border-radius: 10px;
     color: var(--form);
 }
 
-.company-container, .job-container, .city-container{
+.company-container, .job-container, .city-container, .skill-container{
     border: 2px solid black;
     width: 50%;
     border-radius: 10px;
@@ -539,12 +540,12 @@ border-radius: 10px;
 }
 
 
-.company-container label, .job-container label, .city-container label{
+.company-container label, .job-container label, .city-container label, .skill-container label{
     border-right: 1px solid black;
     font-size: 20px;
 }
 
-#company, #job, #city{
+#company, #job, #city,#skill{
     border: none;
     outline: none;
     padding: 12px;
@@ -577,4 +578,179 @@ border-radius: 10px;
 
 .next:hover, .prev:hover{
     color: hwb(182 5% 55%);
+}
+
+.resume{
+    min-width: 30%;
+    max-width: 30%;
+    min-height: 90vh;
+    max-height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    box-shadow: 2px 11px 19px 11px rgba(0,0,0,0.75);
+}
+
+
+.left{
+    width: 36%;
+    height: auto;
+    background-color: #0E484A;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;   
+}
+
+.img-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.img-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-me div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-me i{
+    color: white;
+    font-size: 16px;
+    padding-left: 12px ;
+}
+
+.contact-me p {
+    color: white;
+    font-size: 12px;
+    padding-right: 12px;
+    text-align: right;
+}
+
+.title-container h3{
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.resume-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+}
+.about-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title i{
+    color: white;
+    font-size: 12px;
+}
+
+.resume-about h2{
+    color: white;
+    font-size: 13px;
+    
+    
+    margin-left: 15px;
+    text-align: center;
+}
+
+.resume-about p{
+    color: white;
+    font-size: 10px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 15px;
+    margin-top: -10px;
+}
+
+
+.skill-container:focus-within {
+    border: 2px solid var(--form);
+    
+}
+
+.skill-container:focus-within label {
+    color: var(--form);
+}
+
+.resume-skills h2{
+color: white;
+font-size: 13px;
+margin-left: 10px;
+text-align: center;
+margin-right: 20px;
+}
+
+.skills-title i{
+    color: white;
+    font-size: 12px;
+}
+
+.skills-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.resume-skills p{
+    color: white;
+    font-size: 10px;
+    padding-left: 20px;
+}
+
+
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.lvl{
+    display: flex;
+    gap: 2px;
+    margin-right: 70px;
+}
+.lvl div{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.lvl div:last-child{
+    background-color: grey;
 }
