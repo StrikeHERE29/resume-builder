@@ -754,3 +754,109 @@ margin-right: 20px;
 .lvl div:last-child{
     background-color: grey;
 }
+
+.right-education{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.right-education h2{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--form);
+    padding-top: 40px;
+    justify-self: center;
+    align-self: center;
+    margin-left: 90%;
+    margin-bottom: 50px;
+}
+
+.right-education p{
+    font-size: 10px;
+    color: #555;
+    line-height:0;
+}
+.right-education h5{
+    font-size: 12px;
+    line-height: 0;
+}
+.bac{
+    font-size: 13px;
+    padding: 10px 0;
+    color: var(--form);
+    font-weight: bold;
+}
+
+.edu{
+    margin-bottom: 20px;
+}
+
+
+.right-experience{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.right-experience h2{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--form);
+    padding-top: 40px;
+    justify-self: center;
+    align-self: center;
+    margin-left: 60%;
+    margin-bottom: 50px;
+    min-width: 200px;
+}
+
+
+.right-experience p{
+    font-size: 10px;
+    color: #555;
+    line-height:0;
+}
+.right-experience h5{
+    font-size: 12px;
+    line-height: 0;
+}
+.job-title{
+    font-size: 13px;
+    padding: 10px 0;
+    color: var(--form);
+    font-weight: bold;
+}
+
+.exp{
+    margin-bottom: 20px;
+}
+
+.right-progress{
+    width: 2px;
+    height: 80px;
+    background-color: #0E484A;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    border-radius: 50%;
+}
+
+.pro2{
+    top: 52%;
+
+}
+
+.pro3{
+    top: 27%;
+}
+
+.pro4{
+    top: 37%;
+}
+
+.pro5{
+    top: 70%;
+}
