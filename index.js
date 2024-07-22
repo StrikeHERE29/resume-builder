@@ -8,7 +8,7 @@ let count = 0;
 
 
 
-
+//function to update the form pages
 next.addEventListener("click", () => {
     if (count < pages.length - 1) {
         pages[count].style.visibility = "hidden";
@@ -19,7 +19,7 @@ next.addEventListener("click", () => {
     }
     console.log(count);
 });
-
+//function to update the form pages
 prev.addEventListener("click", () => {
     if (count > 0) {
         pages[count].style.visibility = "hidden";
@@ -37,7 +37,7 @@ prev.addEventListener("click", () => {
 
 
 
-
+//function for the date selector
 document.addEventListener("DOMContentLoaded", () => {
     const yearSelects = document.querySelectorAll(".year");
     const currentYear = 2024;
@@ -52,3 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+
+
+let printBtn = document.getElementById("print");
+
+printBtn.addEventListener("click", ()=>{
+    print();
+})
