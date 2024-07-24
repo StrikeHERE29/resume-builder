@@ -106,11 +106,19 @@ if (Number(inputDay.value) < 10 || Number(inputMonth.value) < 10) {
         </p>
     </div>`;
 
-
+}else{
+    outputDay.innerHTML = `<div class="resume-birth">
+    <p class="p-birth">
+        <span class="day">${inputDay.value}</span>.
+        <span class="month">${inputMonth.value}</span>.
+        <span class="birthYear">${inputYear.value}</span>
+    </p>
+</div>`;
+}
 outputAbout.innerHTML = `<p class="me">${inputAbout.value}</p>`
 
 
-}
+
 
 
 
