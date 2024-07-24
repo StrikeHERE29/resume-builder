@@ -897,10 +897,20 @@ margin-right: 20px;
         margin: 0;
         padding: 0;
         box-shadow: none;
-        background-color: white; }
+        background-color: white;
+     
         
+
+    }
+        .resume p {
+            font-size: 20px;
+        }    
+
+
     @page {
         size: A4;
         margin: 0; 
     }
 }
+
+

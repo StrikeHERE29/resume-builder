@@ -155,9 +155,9 @@
                 <p class="dob">Date of Birth</p>
                 <div class="birthDate">
                     
-                    <input class="birth" type="text" placeholder="DD">
-                    <input class="birth" type="text" placeholder="MM">
-                    <input class="birth" type="text" placeholder="YY">
+                    <input id="dd" class="birth" type="text" placeholder="DD">
+                    <input id="mm" class="birth" type="text" placeholder="MM">
+                    <input id="yy" class="birth" type="text" placeholder="YY">
                 </div>
 
                 <p class="dob">Gender</p>
@@ -377,6 +377,7 @@
 
     <button id="print"><i class="fa-solid fa-file-pdf"></i></button>
 
+    <button class="save">Save</button>
     
 <div class="resume">
     <div class="left">
@@ -405,7 +406,9 @@
                 
                 <div class="resume-birth">
                     <i class="fa-regular fa-calendar"></i>
-                    <p class="p-birth">29.01.2000</p>
+                    <p class="p-birth"><span class="day"></span>
+                        <span class="month"></span>
+                        <span class="birthYear"></span> </p>
                 </div>
             <div class="resume-gen">
                     <i class="fa-solid fa-venus-mars"></i>
@@ -420,7 +423,7 @@
             <h2> About Me</h2>
             </div>
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quos atque nulla sunt quibusdam quisquam commodi expedita quasi eveniet architecto magnam quia iure pariatur inventore officiis, reprehenderit earum optio id!m</p>
+            <p class="me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quos atque nulla sunt quibusdam quisquam commodi expedita quasi eveniet architecto magnam quia iure pariatur inventore officiis, reprehenderit earum optio id!m</p>
         </div>
         <div class="resume-skills">
             <div class="skills-title">
