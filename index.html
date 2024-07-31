@@ -132,6 +132,8 @@
 
 
         <form class="form first-form">
+
+            <button id="savePersonal" value="button">Save</button>
             <h1 class="form-title">Your personal information</h1>
             <p class="form-subtitle">Enter your personal information</p>
             <div class="form-personal">
@@ -187,6 +189,7 @@
     </div>
     
     <form class="form second-form">
+        <button id="saveEdu" value="button">Save</button>
         <h1 class="form-title">education</h1>
         <p class="form-subtitle">Enter your education and Qualifications</p>
         <div class="personal-exp">
@@ -213,40 +216,40 @@
             <div class="start-date">
                 <p>Start date</p>
             
-                <select name="month" id="month">
-                    <option value="1">January</option>
-                    <option value="2">February</option>
-                    <option value="3">March</option>
-                    <option value="4">April</option>
-                    <option value="5">May</option>
-                    <option value="6">June</option>
-                    <option value="7">July</option>
-                    <option value="8">August</option>
-                    <option value="9">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
+                <select name="month" id="start-month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
                 </select>
-                <select name="year" class="year"></select>
+                <select name="start-year" class="start-year"></select>
             
             </div>
             <div class="end-date">
                 <p>End date</p>
-                <select name="month" id="month">
-                    <option value="1">January</option>
-                    <option value="2">February</option>
-                    <option value="3">March</option>
-                    <option value="4">April</option>
-                    <option value="5">May</option>
-                    <option value="6">June</option>
-                    <option value="7">July</option>
-                    <option value="8">August</option>
-                    <option value="9">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
+                <select name="month" id="end-month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
                 </select>
-                <select name="year" class="year"></select>
+                <select name="end-year" class="end-year"></select>
         
             </div>
         </div>
@@ -298,7 +301,7 @@
                     <option value="11">November</option>
                     <option value="12">December</option>
                 </select>
-                <select name="year" class="year"></select>
+                <select name="year" class="start-year"></select>
             
             </div>
             <div class="end-date">
@@ -317,7 +320,7 @@
                     <option value="11">November</option>
                     <option value="12">December</option>
                 </select>
-                <select name="year" class="year"></select>
+                <select name="year" class="end-year"></select>
         
             </div>
         </div>
@@ -377,7 +380,7 @@
 
     <button id="print"><i class="fa-solid fa-file-pdf"></i></button>
 
-    <button class="save">Save</button>
+    
     
 <div class="resume">
     <div class="left">
@@ -482,10 +485,10 @@
             <h2>Education</h2> 
             <div class="edu">
                 <div class="right-progress pro4"></div>
-            <p>2018-2021</p>
-            <h5>Nicolae Titulescu University</h5>
+            <p class="edu-time"><span class="output-start-month">January</span> <span class="output-start-year">2018</span>- <span class="output-end-month">March</span> <span class="output-end-year">2021</span></p>
+            <h5 class="edu-name">Nicolae Titulescu University</h5>
             <p class="bac">Bachelor of Accounting</p>
-            <p>Bucuresti, Romania</p>
+            <p class="edu-place">Bucuresti, Romania</p>
             </div>
             <div class="edu">
                 <div class="right-progress pro5"></div>

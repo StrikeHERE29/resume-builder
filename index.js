@@ -1,6 +1,7 @@
 //selectors
 let printBtn = document.getElementById("print");
-let saveBtn = document.querySelector(".save");
+const savePersonal = document.getElementById("savePersonal");
+const saveEdu = document.getElementById("saveEdu");
 let inputName = document.querySelector("#name");
 let outputName = document.querySelector(".resume-title");
 let inputMail = document.querySelector("#mail")
@@ -24,6 +25,14 @@ let pages = document.querySelectorAll(".steps-container");
 let forms = document.querySelectorAll(".form");
 let inputAbout = document.querySelector("#about-me");
 let outputAbout = document.querySelector(".me");
+let inputEdu = document.querySelector("#uni");
+let inputDeg = document.querySelector("#degree");
+let inputEduCity = document.querySelector("#city");
+let inputEduStartMonth = document.querySelector("#start-month"); 
+let inputEduStartYear = document.querySelector(".start-year"); 
+let inputEduEndMonth = document.querySelector("#end-month");
+let inputEduEndYear = document.querySelector(".end-year")
+let eduContainer = document.querySelector(".edu");
 
 let count = 0;
 
@@ -58,7 +67,22 @@ prev.addEventListener("click", () => {
 
 //function for the date selector
 document.addEventListener("DOMContentLoaded", () => {
-    const yearSelects = document.querySelectorAll(".year");
+    const yearSelects = document.querySelectorAll(".start-year");
+    const currentYear = 2024;
+    const startYear = 1960;
+
+    yearSelects.forEach(yearSelect => {
+        for (let year = currentYear; year >= startYear; year--) {
+            const option = document.createElement("option");
+            option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSelects = document.querySelectorAll(".end-year");
     const currentYear = 2024;
     const startYear = 1960;
 
@@ -74,71 +98,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 //event listener to update the personal info
-saveBtn.addEventListener("click", ()=>{
-  outputName.innerHTML = `<div class="title-container">
-        <h3 class="resume-title">${inputName.value}</h3>
+savePersonal.addEventListener("click", (e) => {
+    // Prevent the default button behavior
+    e.preventDefault();
+  
+    outputName.innerHTML = `
+      <div class="title-container">
+          <h3 class="resume-title">${inputName.value}</h3>
+      </div>
+    `;
+  
+    outputMail.innerHTML = `
+      <div class="resume-mail">
+          <p class="p-mail">${inputMail.value}</p>
+      </div>
+    `;
+  
+    outputPhone.innerHTML = `
+      <div class="resume-phone">
+          <p class="p-phone">${inputPhone.value}</p>
+      </div>
+    `;
+  
+    outputAdress.innerHTML = `
+      <div class="resume-adress">
+          <p class="p-adress">${inputAdress.value}</p>
+      </div>
+    `;
+  
+    // Add the prefix 0 if the day or month is less than 10
+    outputDay.innerHTML = `
+      <div class="resume-birth">
+          <p class="p-birth">
+              <span class="day">${inputDay.value.padStart(2, '0')}</span>.
+              <span class="month">${inputMonth.value.padStart(2, '0')}</span>.
+              <span class="birthYear">${inputYear.value}</span>
+          </p>
+      </div>
+    `;
+  
+    outputAbout.innerHTML = `<p class="me">${inputAbout.value}</p>`;
+  
+    // Check if male or female is selected
+    if (inputMale.checked) {
+      outputGender.innerHTML = `
+        <div class="resume-gen">
+            <p class="p-sex">Male</p>
         </div>
-        `
-outputMail.innerHTML = `<div class="resume-mail">
-<p class="p-mail">${inputMail.value}</p>
-</div>`
-
-outputPhone.innerHTML = `<div class="resume-phone">
-<p class="p-phone">${inputPhone.value}</p>
-</div>`
-
-outputAdress.innerHTML = `<div class="resume-adress">
-
-<p class="p-adress">${inputAdress.value}</p>
-</div>`
-
-
-// add the prefix 0 if the day or month is less than 10
-if (Number(inputDay.value) < 10 || Number(inputMonth.value) < 10) {
-    outputDay.innerHTML = `<div class="resume-birth">
-        <p class="p-birth">
-            <span class="day">${inputDay.value.padStart(2, '0')}</span>.
-            <span class="month">${inputMonth.value.padStart(2, '0')}</span>.
-            <span class="birthYear">${inputYear.value}</span>
-        </p>
-    </div>`;
-
-}else{
-    outputDay.innerHTML = `<div class="resume-birth">
-    <p class="p-birth">
-        <span class="day">${inputDay.value}</span>.
-        <span class="month">${inputMonth.value}</span>.
-        <span class="birthYear">${inputYear.value}</span>
-    </p>
-</div>`;
-}
-outputAbout.innerHTML = `<p class="me">${inputAbout.value}</p>`
+      `;
+    } else if (inputFemale.checked) {
+      outputGender.innerHTML = `
+        <div class="resume-gen">
+            <p class="p-sex">Female</p>
+        </div>
+      `;
+    }
+  });
+  
+//event listener to update the edu info
 
 
 
-
-
-
-
-
-
-//check if is male or female selected
-if(inputMale.checked){
-    outputGender.innerHTML = `<div class="resume-gen">
-    <p class="p-sex">Male</p>
-</div>`
-}else if(inputFemale.checked){
-    outputGender.innerHTML = `<div class="resume-gen">
-    <p class="p-sex">Female</p>
-</div>`
-}
-
-
-
-})
+saveEdu.addEventListener("click", (e) => {
+  e.preventDefault();
+  
+  
+    eduContainer.innerHTML = `
+      <div class="right-progress pro4"></div>
+      <p class="edu-time">
+        <span class="output-start-month">${inputEduStartMonth.value}</span> 
+        <span class="output-start-year">${inputEduStartYear.value}</span> - 
+        <span class="output-end-month">${inputEduEndMonth.value}</span> 
+        <span class="output-end-year">${inputEduEndYear.value}</span>
+      </p>
+      <h5 class="edu-name">${inputEdu.value}</h5>
+      <p class="bac">${inputDeg.value}</p>
+      <p class="edu-place">${inputEduCity.value}</p>
+    `;
+  });
 
 
 
