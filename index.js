@@ -2,6 +2,8 @@
 let printBtn = document.getElementById("print");
 const savePersonal = document.getElementById("savePersonal");
 const saveEdu = document.getElementById("saveEdu");
+const saveExp = document.getElementById("saveExp");
+const saveSkill = document.getElementById("saveSkill");
 let inputName = document.querySelector("#name");
 let outputName = document.querySelector(".resume-title");
 let inputMail = document.querySelector("#mail")
@@ -33,6 +35,16 @@ let inputEduStartYear = document.querySelector(".start-year");
 let inputEduEndMonth = document.querySelector("#end-month");
 let inputEduEndYear = document.querySelector(".end-year")
 let eduContainer = document.querySelector(".edu");
+let expContainer = document.querySelector(".exp");
+let inputExpName = document.querySelector("#company");
+let inputExpJob = document.querySelector("#job");
+let inputExpCity = document.querySelector("#city-exp");
+let inputExpStartMonth = document.querySelector("#exp-start-month");
+let inputExpStartYear = document.querySelector(".exp-start-year");
+let inputExpEndMonth = document.querySelector("#exp-end-month");
+let inputExpEndYear = document.querySelector(".exp-end-year");
+let inputSkill = document.querySelector("#skill");
+let skillContainer = document.querySelector(".skill")
 
 let count = 0;
 
@@ -164,8 +176,9 @@ saveEdu.addEventListener("click", (e) => {
   e.preventDefault();
   
   
-    eduContainer.innerHTML = `
-      <div class="right-progress pro4"></div>
+    eduContainer.innerHTML += `
+    <div class="edu">
+      
       <p class="edu-time">
         <span class="output-start-month">${inputEduStartMonth.value}</span> 
         <span class="output-start-year">${inputEduStartYear.value}</span> - 
@@ -175,9 +188,49 @@ saveEdu.addEventListener("click", (e) => {
       <h5 class="edu-name">${inputEdu.value}</h5>
       <p class="bac">${inputDeg.value}</p>
       <p class="edu-place">${inputEduCity.value}</p>
+      </div>
     `;
+
+    inputEdu.value = ``;
+    inputDeg.value = ``;
+    inputEduCity.value = ``;
+
   });
 
+  
+  //ev lis to update the exp section
+
+  saveExp.addEventListener("click", (e)=>{
+  e.preventDefault();
+    expContainer.innerHTML += `<div class="exp">
+    <span class="output-start-month">${inputExpStartMonth.value}</span> 
+        <span class="output-start-year">${inputExpStartYear.value}</span> - 
+        <span class="output-end-month">${inputExpEndMonth.value}</span> 
+        <span class="output-end-year">${inputExpEndYear.value}</span>
+    <h5>${inputExpName.value}</h5>
+    <p class="job-title">${inputExpJob.value}</p>
+    <p>${inputExpCity.value}</p>
+</div>`
+
+inputExpName.value = ``;
+inputExpJob.value = ``;
+inputExpCity.value = ``;
+  })
+
+  //ev lis to update the skill section
+
+  saveSkill.addEventListener("click", (e)=>{
+    e.preventDefault();
+    skillContainer.innerHTML += `<div class="lvl">
+    <ul class="ul-skills">
+        <li>${inputSkill.value}</li>
+    </ul>
+    
+</div>
+    `
+inputSkill.value = ``;
+
+  })
 
 
 //even listener to update the avatar
