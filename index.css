@@ -285,6 +285,7 @@ visibility: hidden;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .form-title, .form-subtitle{
@@ -440,6 +441,7 @@ border-radius: 10px;
     text-align: center;
     font-weight: bold;
     margin-top: 40px;
+   
 }
 
 #about-me::placeholder{
@@ -637,20 +639,40 @@ border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: -1.5rem;
 }
 
-
-.contact-me i{
+.i{
     color: white;
     font-size: 16px;
     padding-left: 12px ;
+    visibility: hidden;
 }
+
+
+.i-active{
+    color: white;
+    font-size: 16px;
+    padding-left: 12px ;
+  visibility: visible;
+  margin-bottom: -1rem;
+    
+}
+
+.resume-mail,.resume-phone,.resume-adress,.resume-birth,.resume-gen{
+    padding-bottom: 10px;
+}
+
+
+
 
 .contact-me p {
     color: white;
     font-size: 12px;
     padding-right: 12px;
     text-align: right;
+   padding-bottom: -10px;
+    
 }
 
 .title-container h3{
@@ -665,7 +687,9 @@ border-radius: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
+    margin-top: 40px;
+    
+   
 }
 .about-title{
     display: flex;
@@ -681,8 +705,6 @@ border-radius: 10px;
 .resume-about h2{
     color: white;
     font-size: 13px;
-    
-    
     margin-left: 15px;
     text-align: center;
 }
@@ -694,8 +716,19 @@ border-radius: 10px;
     padding: 10px;
     padding-left: 15px;
     margin-top: -10px;
+    
 }
 
+
+.me{
+    overflow: hidden;
+    min-width: 10rem;
+    max-width: 12rem;
+    margin-left: -10px;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
 
 .skill-container:focus-within {
     border: 2px solid var(--form);
@@ -877,6 +910,43 @@ ul li::before{
     cursor: pointer;    
     z-index: 99;
 }
+
+.save{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    color: var(--form);
+    font-size: 40px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#savePersonal{
+    bottom: 19%;
+    right: 25%;
+}
+
+#saveEdu{
+bottom: 15%;
+right:45%;
+}
+
+#saveExp{
+    bottom: 15%;
+    right:45%;
+    }
+
+    #saveSkill{
+        bottom: 55%;
+        right:45%;
+        }
+
+.save:hover{
+color: hsl(182, 68%, 23%);
+}
+
+
+
 @media print {
     body {
         margin: 0;
