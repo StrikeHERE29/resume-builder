@@ -857,6 +857,12 @@ margin-right: 20px;
 }
 
 
+.right-experience span{
+    font-size: 12px;
+    color: #555;
+    
+}
+
 .right-experience p{
     font-size: 10px;
     color: #555;
@@ -884,6 +890,8 @@ li{
 ul{
     list-style: none;
     color: white;
+    font-size: 12px;
+    text-transform: capitalize;
 }
 
 ul li::before{
@@ -946,6 +954,10 @@ color: hsl(182, 68%, 23%);
 }
 
 
+.edu span{
+    font-size: 12px;
+}
+
 
 @media print {
     body {
@@ -977,14 +989,52 @@ color: hsl(182, 68%, 23%);
 
     }
         .resume p {
-            font-size: 20px;
+            font-size: 16px;
         }    
+        .resume h2{
+            font-size: 20px;
+        }
 
+        .h2-r{
+            text-align: center;
+            letter-spacing: 12px;
+            margin-left: 40px;
+        }
 
+        .right-experience h5, .right-education h5{
+            font-size: 16px;
+            line-height: 0;
+            letter-spacing: 2px;
+        }
+
+        .edu span, .exp span{
+            font-size: 14px;
+            line-height: 0;
+        }
+
+        ul{
+            font-size: 16px;
+        }
+
+        
     @page {
         size: A4;
         margin: 0; 
     }
 }
 
+@media screen and (max-width: 480px){
+    .steps-container *{
+        font-size: 12px;
+        max-width: 100px;
+    }
 
+    .form{
+        max-width: 200px;
+    }
+
+    .resume{
+        visibility: hidden;
+    }
+
+}
